@@ -9,7 +9,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5000',
+  origin: [
+    'http://localhost:5000',  // Local development
+    'https://mentorlink-demo.onrender.com', // Your Render domain
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Accept'],
 }));
