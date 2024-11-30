@@ -27,9 +27,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-2 text-gray-400">
-              <p className="flex items-center"><Mail className="h-5 w-5 mr-2" /> info@mentorlink.com</p>
-              <p className="flex items-center"><Phone className="h-5 w-5 mr-2" /> (555) 123-4567</p>
-              <p className="flex items-center"><MapPin className="h-5 w-5 mr-2" /> San Francisco, CA</p>
+              <p className="flex items-center"><Mail className="h-5 w-5 mr-2" /> mentorlink.contact@gmail.com</p>
+              <p className="flex items-center"><Phone className="h-5 w-5 mr-2" /> Currently unavailable</p>
+              <p className="flex items-center"><MapPin className="h-5 w-5 mr-2" /> Kozhikode, Kerala</p>
             </div>
           </div>
           <div>

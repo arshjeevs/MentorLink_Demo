@@ -7,6 +7,8 @@ require('dotenv').config();
 
 const app = express();
 
+const https = require('https');
+
 // Middleware
 app.use(cors({
   origin: [
@@ -41,5 +43,21 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+function pingWebsite() {
+  const url = "https://mentorlink-demo.onrender.com";
+  
+  https.get(url, (resp) => {
+      const time = new Date().toLocaleString();
+      console.log(`[${time}] Ping status: ${resp.statusCode}`);
+  }).on('error', (err) => {
+      console.log(`Error: ${err.message}`);
+  });
+}
+
+// Run ping every 50 seconds
+console.log("Starting website pinger...");
+setInterval(pingWebsite, 50000);
+pingWebsite(); // Initial ping
 
 module.exports = app; 

@@ -69,10 +69,10 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-100 py-20">
+      <section className="bg-gray-100 py-20 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-8">Ready to Start Your Journey?</h2>
-          <div className="space-x-4">
+          <div className="flex flex-col justify-center gap-4 ">
             <Link
               to="/contact"
               className="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-indigo-700"
